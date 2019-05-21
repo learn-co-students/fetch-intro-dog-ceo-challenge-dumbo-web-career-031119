@@ -1,5 +1,4 @@
 console.log('%c HI', 'color: firebrick')
-// was having an issue setting const div = document.querySelector('div')? outside of the function... need a reminder why? you forgot someting about 'scope'(mouthwash hehehe)
 
 ////////////////////////Challenge 1///////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', event => {
@@ -21,7 +20,6 @@ function getDogs() {
       })
     })
 }
-// challenge 1 done a messy was but done cause the way I was delagating the responsibility was not working IDK why
 
 //////////////////////////////Challenge 2//////////////////////////////////////
 const breedUrl = 'https://dog.ceo/api/breeds/list/all'
@@ -34,7 +32,6 @@ function listDogs() {
       let dogBreeds = Object.keys(data.message)
       let dropDownMenu = document.querySelector('#breed-dropdown')
       dogBreeds.forEach(breed => {
-
         dogUl.innerHTML += `<li id="doggieLi" >${breed}</li>`
       })
 //////////////////////////////Challenge 4///////////////////////////////////////////////
@@ -43,7 +40,6 @@ function listDogs() {
         let filteredBreeds = dogBreeds.filter(dog => dog.startsWith(selectLetter))
         dogUl.innerHTML = ""
         filteredBreeds.forEach(breed => {
-
           dogUl.innerHTML += `<li id="doggieLi" >${breed}</li>`
         })
 
